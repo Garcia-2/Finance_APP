@@ -1,0 +1,45 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+body {
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background: linear-gradient(45deg, #f06, #9f6);
+    }
+    25% {
+        background: linear-gradient(45deg, #06f, #f69);
+    }
+    50% {
+        background: linear-gradient(45deg, #9f6, #f06);
+    }
+    75% {
+        background: linear-gradient(45deg, #f69, #06f);
+    }
+    100% {
+        background: linear-gradient(45deg, #f06, #9f6);
+    }
+}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell Stock
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="mb-3">
+            <label for="symbol">Select a stock to sell:</label>
+            <select class="form-select" id="symbol" name="symbol">
+                <option value="" selected disabled>Select a stock</option>
+                <!-- Add options dynamically based on the user's stock holdings -->
+                {% for stock in user_stocks %}
+                    <option value="{{ stock['symbol'] }}">{{ stock['symbol'] }} - {{ stock['name'] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="shares">Number of shares to sell:</label>
+            <input class="form-control" id="shares" name="shares" placeholder="Shares" type="number" min="1" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Sell Stock</button>
+    </form>
+{% endblock %}
